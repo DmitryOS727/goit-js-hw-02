@@ -3,21 +3,22 @@ function getShippingCost(country) {
     const priceChile = 250;
     const priceAustralia = 170;
     const priceJamaica = 120;
-
+    const canDeliver = `Shipping to ${country} will cost ${priceAustralia} credits`
+    const noDelivery = "Sorry, there is no delivery to your country"
 
     switch (country) {
         case "Australia":
-            return `Shipping to ${country} will cost ${priceAustralia} credits`
+            return canDeliver
         case "Germany":
-            return "Sorry, there is no delivery to your country"
+            return noDelivery
         case "China":
-            return `Shipping to ${country} will cost ${priceChina} credits`        
+            return canDeliver     
         case "Chile":
-            return `Shipping to ${country} will cost ${priceChile} credits`          
+            return canDeliver       
         case "Jamaica":
-            return `Shipping to ${country} will cost ${priceJamaica} credits`
+            return canDeliver
         case "Sweden":
-            return "Sorry, there is no delivery to your country"
+            return noDelivery
 }
 
 
